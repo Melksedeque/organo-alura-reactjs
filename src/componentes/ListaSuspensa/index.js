@@ -5,6 +5,9 @@ const ListaSuspensa = (props) => {
     <div className="lista-suspensa">
       <label>{props.label}</label>
       <select>
+        <option value="" data-default disabled selected>
+          -- Escolha uma opção --
+        </option>
         {props.itens.map((item) => (
           <option key={item}>{item}</option>
         ))}
