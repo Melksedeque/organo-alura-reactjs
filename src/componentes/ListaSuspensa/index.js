@@ -4,7 +4,7 @@ const ListaSuspensa = (props) => {
   return (
     <div className="lista-suspensa">
       <label>{props.label}</label>
-      <select>
+      <select required={props.obrigatorio}>
         <option value="" data-default disabled selected>
           -- Escolha uma opção --
         </option>
