@@ -4,7 +4,11 @@ const ListaSuspensa = (props) => {
   return (
     <div className="lista-suspensa">
       <label>{props.label}</label>
-      <select required={props.obrigatorio}>
+      <select
+        required={props.obrigatorio}
+        value={props.valor}
+        onChange={(e) => props.aoAlterado(e.target.value)}
+      >
         <option value="" data-default disabled selected>
           -- Escolha uma opção --
         </option>
