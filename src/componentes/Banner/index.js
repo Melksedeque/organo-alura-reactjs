@@ -7,7 +7,7 @@ function Banner() {
         src="/imagens/banner.png"
         alt="Banner Principal da página do Organo"
       />
-      <figcaption sr-only>Banner principal da página do Organo</figcaption>
+      <figcaption hidden>Banner principal da página do Organo</figcaption>
     </figure>
   );
 }
