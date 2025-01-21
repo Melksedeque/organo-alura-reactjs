@@ -18,10 +18,11 @@ const Formulario = () => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
+  const [time, setTime] = useState("");
 
   const aoSalvar = (e) => {
     e.preventDefault();
-    console.log("Form enviado com sucesso! => ", nome, cargo, imagem);
+    console.log("Form enviado com sucesso! => ", nome, cargo, imagem, time);
   };
 
   return (
@@ -51,7 +52,13 @@ const Formulario = () => {
           aoAlterado={(valor) => setImagem(valor)}
           placeholder="Informe o endereço da imagem"
         />
-        <ListaSuspensa label="Time" itens={times} obrigatorio={true} />
+        <ListaSuspensa
+          label="Time"
+          itens={times}
+          obrigatorio={true}
+          valor={time}
+          aoAlterado={(valor) => setTime(valor)}
+        />
         <Botao>Criar card</Botao>
       </form>
     </section>
