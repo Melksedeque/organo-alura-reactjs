@@ -1,10 +1,10 @@
 import "./Time.css";
 
-const Time = () => {
+const Time = (props) => {
   return (
-    <section>
+    <section className="time">
       <header>
-        <h3>Programação</h3>
+        <h3>{props.nome}</h3>
       </header>
       <div className="colaboradores">
         <div className="colaborador">
