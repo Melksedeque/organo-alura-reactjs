@@ -1,12 +1,11 @@
 .time {
-  background-color: #d9f7e9;
   padding: 32px;
   text-align: center;
 }
 
 .time h3 {
-  border-bottom: 4px solid #57c278;
+  border-bottom: 4px solid transparent;
   display: inline-block;
-  font-size: 32px;
+  font: normal 32px "Prata", serif;
   padding-bottom: 8px;
 }
