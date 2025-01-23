@@ -19,7 +19,13 @@ function App() {
         }
       />
       <h2>Minha Organização:</h2>
-      <Time />
+      <Time nome="Programação" />
+      <Time nome="Front-End" />
+      <Time nome="Data Science" />
+      <Time nome="DevOps" />
+      <Time nome="UX e Design" />
+      <Time nome="Mobile" />
+      <Time nome="Inovação e Gestão" />
     </div>
   );
 }
