@@ -57,13 +57,14 @@ function App() {
         }
       />
       <h2>Minha Organização:</h2>
-      <Time nome="Programação" />
-      <Time nome="Front-End" />
-      <Time nome="Data Science" />
-      <Time nome="DevOps" />
-      <Time nome="UX e Design" />
-      <Time nome="Mobile" />
-      <Time nome="Inovação e Gestão" />
+      {times.map((time) => (
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+        />
+      ))}
     </div>
   );
 }
