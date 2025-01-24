@@ -9,3 +9,10 @@
   font: normal 32px "Prata", serif;
   padding-bottom: 8px;
 }
+
+.time .colaboradores {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
