@@ -3,6 +3,7 @@ import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
+import TituloSecao from "./componentes/TituloSecao";
 
 function App() {
   const times = [
@@ -58,7 +59,7 @@ function App() {
           colaboradorAdicionado(colaborador)
         }
       />
-      <h2>Minha Organização:</h2>
+      <TituloSecao nome="Minha Organização:" />
       {times.map((time) => (
         <Time
           key={time.nome}
