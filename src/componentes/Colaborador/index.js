@@ -1,16 +1,30 @@
 import "./Colaborador.css";
 
-const Colaborador = ({ nome, cargo, foto, cor }) => {
+const Colaborador = ({ nome, cargo, link, cor }) => {
   const estiloColaborador = {
     backgroundColor: cor,
   };
+  let fotoColaborador;
+
+  if (link.endsWith("/")) {
+    fotoColaborador = `${link.slice(0, -1)}.png`;
+  } else {
+    fotoColaborador = `${link}.png`;
+  }
+
   return (
     <div className="colaborador">
       <figure className="imagem-colaborador" style={estiloColaborador}>
-        <img src={foto} alt={nome} />
-        <figcaption hidden>Melksedeque Silva</figcaption>
+        <a href={link} title={nome} target="_blank" rel="noreferrer">
+          <img src={fotoColaborador} alt={nome} />
+          <figcaption hidden>Melksedeque Silva</figcaption>
+        </a>
       </figure>
-      <h4>{nome}</h4>
+      <h4>
+        <a href={link} title={nome} target="_blank" rel="noreferrer">
+          {nome}
+        </a>
+      </h4>
       <h5>{cargo}</h5>
     </div>
   );
