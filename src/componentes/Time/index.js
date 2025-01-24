@@ -8,7 +8,8 @@ const Time = (props) => {
     props.colaboradores.length > 0 && (
       <section className="time" style={estiloTime}>
         <header>
-          <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
+          <h3>{props.nome}</h3>
+          <span style={{ backgroundColor: props.corPrimaria }}></span>
         </header>
         <div className="colaboradores">
           {props.colaboradores.map((colaborador) => (
