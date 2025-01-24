@@ -7,7 +7,7 @@ import { useState } from "react";
 const Formulario = (props) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
-  const [imagem, setImagem] = useState("");
+  const [link, setLink] = useState("");
   const [time, setTime] = useState("");
 
   const aoSalvar = (e) => {
@@ -15,12 +15,12 @@ const Formulario = (props) => {
     props.aoColaboradorCadastrado({
       nome,
       cargo,
-      imagem,
+      link,
       time,
     });
     setNome("");
     setCargo("");
-    setImagem("");
+    setLink("");
     setTime("");
   };
 
@@ -45,11 +45,11 @@ const Formulario = (props) => {
           obrigatorio={true}
         />
         <CampoTexto
-          label="Imagem"
+          label="Github"
           type="text"
-          valor={imagem}
-          aoAlterado={(valor) => setImagem(valor)}
-          placeholder="Informe o endereço da imagem"
+          valor={link}
+          aoAlterado={(valor) => setLink(valor)}
+          placeholder="Informe o seu link do Github"
         />
         <ListaSuspensa
           label="Time"
