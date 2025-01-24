@@ -5,7 +5,8 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.025);
   display: inline-block;
   overflow: hidden;
-  width: 268px;
+  margin: 16px;
+  width: 260px;
 }
 
 .colaborador .imagem-colaborador {
