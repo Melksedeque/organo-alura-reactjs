@@ -10,10 +10,14 @@ const Time = (props) => {
         <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
       </header>
       <div className="colaboradores">
-        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
-        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
-        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
-        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
+        {props.colaboradores.map((colaborador) => (
+          <Colaborador
+            cor={props.corPrimaria}
+            foto={colaborador.imagem}
+            nome={colaborador.nome}
+            cargo={colaborador.cargo}
+          />
+        ))}
       </div>
     </section>
   );
