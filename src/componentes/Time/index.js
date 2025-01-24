@@ -10,7 +10,7 @@ const Time = (props) => {
         <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
       </header>
       <div className="colaboradores">
-        <Colaborador />
+        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
       </div>
     </section>
   );
