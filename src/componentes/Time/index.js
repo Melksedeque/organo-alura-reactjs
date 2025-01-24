@@ -11,6 +11,9 @@ const Time = (props) => {
       </header>
       <div className="colaboradores">
         <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
+        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
+        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
+        <Colaborador cor={props.corPrimaria} foto={""} nome={""} cargo={""} />
       </div>
     </section>
   );
