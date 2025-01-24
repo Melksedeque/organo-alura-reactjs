@@ -1,14 +1,20 @@
 import "./Colaborador.css";
 
-const Colaborador = () => {
+const Colaborador = (props) => {
+  const estiloColaborador = {
+    backgroundColor: props.cor,
+  };
   return (
     <div className="colaborador">
-      <figure className="imagem-colaborador">
-        <img src="" alt="Foto de Perfil da Juliana Amoasei" />
-        <figcaption hidden>Juliana Amoasei</figcaption>
+      <figure className="imagem-colaborador" style={estiloColaborador}>
+        <img
+          src="https://www.github.com/Melksedeque.png"
+          alt="Foto de Perfil de Melksedeque Silva"
+        />
+        <figcaption hidden>Melksedeque Silva</figcaption>
       </figure>
-      <h4>Juliana Amoasei</h4>
-      <p>Desenvolvedora de software e instrutora</p>
+      <h4>Melksedeque Silva</h4>
+      <h5>Desenvolvedor Full Stack</h5>
     </div>
   );
 };
