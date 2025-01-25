@@ -111,6 +111,7 @@ organo-alura-reactjs/
 │ └── index.js
 ├── .gitignore
 ├── LICENSE
+├── package-lock.json
 ├── package.json
 └── README.md
 ```
