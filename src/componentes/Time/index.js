@@ -14,6 +14,7 @@ const Time = (props) => {
         <div className="colaboradores">
           {props.colaboradores.map((colaborador) => (
             <Colaborador
+              key={colaborador.nome}
               cor={props.corPrimaria}
               link={colaborador.link}
               nome={colaborador.nome}
