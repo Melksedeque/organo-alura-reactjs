@@ -22,6 +22,8 @@
 
 O projeto "Organo - Pessoas e Times" é uma aplicação React.JS que permite o cadastro de colaboradores em seus respectivos times dentro de uma organização. Cada time é representado por uma cor diferente, tornando a visualização mais intuitiva e agradável.
 
+Este projeto ainda está em desenvolvimento para melhorias.
+
 ## Tecnologias Utilizadas
 
 - **React.JS:** Biblioteca JavaScript para a construção de interfaces de usuário.
