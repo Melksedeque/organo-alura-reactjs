@@ -6,6 +6,7 @@
 
 - [Layout](#layout)
 - [Descrição](#descrição)
+  - [Proximos passos de desenvolvimento](#proximos-passos-de-desenvolvimento)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Funcionalidades](#funcionalidades)
 - [Como Instalar e Rodar o Projeto](#como-instalar-e-rodar-o-projeto)
