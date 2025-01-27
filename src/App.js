@@ -117,11 +117,6 @@ function App() {
     setTimes([...times, { ...novoTime, id: uuidv4() }]);
   }
 
-  console.log(
-    "Times no App.js:",
-    times.map((time) => time.nome)
-  );
-
   return (
     <div className="App">
       <Banner />
