@@ -44,7 +44,46 @@ function App() {
     },
   ];
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const inicial = [
+    {
+      nome: "Daniel Artine",
+      cargo: "Engenheiro de Software",
+      link: "https://github.com/danielartine",
+      time: times[0].nome,
+    },
+    {
+      nome: "Guilherme Lima",
+      cargo: "Desenvolvedor Python e JavaScript",
+      link: "https://github.com/guilhermeonrails",
+      time: times[0].nome,
+    },
+    {
+      nome: "Juliana Amoasei",
+      cargo: "Desenvolvedora de Softwares",
+      link: "https://github.com/julianaamoasei",
+      time: times[0].nome,
+    },
+    {
+      nome: "Melksedeque Silva",
+      cargo: "Desenvolvedor Front-End",
+      link: "https://github.com/Melksedeque",
+      time: times[1].nome,
+    },
+    {
+      nome: "Rodrigo Passos",
+      cargo: "Desenvolvedor Front-End",
+      link: "https://github.com/rpc1910",
+      time: times[1].nome,
+    },
+    {
+      nome: "Amanda Domingues",
+      cargo: "Cientista de Dados",
+      link: "https://github.com/amandaamnd",
+      time: times[2].nome,
+    },
+  ];
+
+  const [colaboradores, setColaboradores] = useState(inicial);
   const colaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
