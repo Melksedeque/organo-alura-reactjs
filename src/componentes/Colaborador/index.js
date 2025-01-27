@@ -19,7 +19,7 @@ const Colaborador = ({ colaborador, cor, aoDeletar }) => {
         size={25}
         color="tomato"
         className="deletar"
-        onClick={aoDeletar}
+        onClick={() => aoDeletar(colaborador.id)}
       />
       <figure className="imagem-colaborador" style={estiloColaborador}>
         <a

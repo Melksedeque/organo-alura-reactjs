@@ -95,8 +95,10 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   };
 
-  function deletarColaborador(colaborador) {
-    console.log(colaborador);
+  function deletarColaborador(id) {
+    setColaboradores(
+      colaboradores.filter((colaborador) => colaborador.id !== id)
+    );
     return;
   }
 
