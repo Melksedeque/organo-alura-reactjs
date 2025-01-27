@@ -1,5 +1,5 @@
 import "./Formulario.css";
-import CampoTexto from "../CampoTexto";
+import Campo from "../Campo";
 import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import { useState } from "react";
@@ -30,7 +30,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
     <section className="formulario">
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <CampoTexto
+        <Campo
           label="Nome"
           type="text"
           valor={nome}
@@ -38,7 +38,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
           placeholder="Digite seu nome"
           obrigatorio
         />
-        <CampoTexto
+        <Campo
           label="Cargo"
           type="text"
           valor={cargo}
@@ -46,7 +46,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
           placeholder="Digite seu cargo"
           obrigatorio
         />
-        <CampoTexto
+        <Campo
           label="Github"
           type="text"
           valor={link}
@@ -69,7 +69,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
         }}
       >
         <h2>Preencha os dados para criar um novo time.</h2>
-        <CampoTexto
+        <Campo
           label="Nome"
           type="text"
           valor={nomeTime}
@@ -77,9 +77,9 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
           placeholder="Digite o nome do time"
           obrigatorio
         />
-        <CampoTexto
+        <Campo
           label="Cor do time"
-          type="text"
+          type="color"
           valor={corTime}
           aoAlterado={(valor) => setCorTime(valor)}
           placeholder="Insira a cor do time em Hex"
