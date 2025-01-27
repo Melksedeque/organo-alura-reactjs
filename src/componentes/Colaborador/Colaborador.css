@@ -4,12 +4,14 @@
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.025);
   display: inline-block;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
   margin: 16px;
   width: 260px;
 }
 
 .colaborador .imagem-colaborador {
+  border-radius: 10px 10px 0 0;
   height: 100px;
   margin: 0;
   margin-bottom: 70px;
@@ -47,4 +49,19 @@
   color: #212121;
   font: normal 16px "Montserrat", sans-serif;
   margin: 10px 0 30px;
+}
+
+.deletar {
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  transition: all 0.25s ease;
+}
+
+.colaborador:hover .deletar {
+  display: block;
+  opacity: 1;
 }
