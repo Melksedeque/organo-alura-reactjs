@@ -113,11 +113,21 @@ function App() {
     );
   }
 
+  function criarTime(novoTime) {
+    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+  }
+
+  console.log(
+    "Times no App.js:",
+    times.map((time) => time.nome)
+  );
+
   return (
     <div className="App">
       <Banner />
       <Formulario
-        nomesTimes={times.map((time) => time.nome)}
+        criarTime={criarTime}
+        times={Array.isArray(times) ? times.map((time) => time.nome) : []}
         aoColaboradorCadastrado={(colaborador) =>
           colaboradorAdicionado(colaborador)
         }
