@@ -52,6 +52,7 @@ function App() {
       cargo: "Engenheiro de Software",
       link: "https://github.com/danielartine",
       time: times[0].nome,
+      favorito: false,
     },
     {
       id: uuidv4(),
@@ -59,6 +60,7 @@ function App() {
       cargo: "Desenvolvedor Python e JavaScript",
       link: "https://github.com/guilhermeonrails",
       time: times[0].nome,
+      favorito: false,
     },
     {
       id: uuidv4(),
@@ -66,6 +68,7 @@ function App() {
       cargo: "Desenvolvedora de Softwares",
       link: "https://github.com/julianaamoasei",
       time: times[0].nome,
+      favorito: false,
     },
     {
       id: uuidv4(),
@@ -73,6 +76,7 @@ function App() {
       cargo: "Desenvolvedor Front-End",
       link: "https://github.com/Melksedeque",
       time: times[1].nome,
+      favorito: false,
     },
     {
       id: uuidv4(),
@@ -80,6 +84,7 @@ function App() {
       cargo: "Desenvolvedor Front-End",
       link: "https://github.com/rpc1910",
       time: times[1].nome,
+      favorito: false,
     },
     {
       id: uuidv4(),
@@ -87,6 +92,7 @@ function App() {
       cargo: "Cientista de Dados",
       link: "https://github.com/amandaamnd",
       time: times[2].nome,
+      favorito: false,
     },
   ];
 
@@ -117,6 +123,15 @@ function App() {
     setTimes([...times, { ...novoTime, id: uuidv4() }]);
   }
 
+  function resolverFavorito(id) {
+    setColaboradores(
+      colaboradores.map((colaborador) => {
+        if (colaborador.id === id) colaborador.favorito = !colaborador.favorito;
+        return colaborador;
+      })
+    );
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -137,6 +152,7 @@ function App() {
             (colaborador) => colaborador.time === time.nome
           )}
           aoDeletar={deletarColaborador}
+          aoFavoritar={resolverFavorito}
         />
       ))}
       <Rodape />
