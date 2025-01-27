@@ -6,7 +6,7 @@ import Rodape from "./componentes/Rodape";
 import TituloSecao from "./componentes/TituloSecao";
 
 function App() {
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Programação",
       corPrimaria: "#57C278",
@@ -42,7 +42,7 @@ function App() {
       corPrimaria: "#FF8A29",
       corSecundaria: "#FFEEDF",
     },
-  ];
+  ]);
 
   const inicial = [
     {
@@ -93,6 +93,17 @@ function App() {
     return;
   }
 
+  function alterarCorDoTime(cor, nome) {
+    setTimes(
+      times.map((time) => {
+        if (time.nome === nome) {
+          time.corSecundaria = cor;
+        }
+        return time;
+      })
+    );
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -107,6 +118,7 @@ function App() {
         <Time
           key={index}
           time={time}
+          alterarCor={alterarCorDoTime}
           colaboradores={colaboradores.filter(
             (colaborador) => colaborador.time === time.nome
           )}
