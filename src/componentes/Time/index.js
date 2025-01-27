@@ -1,26 +1,27 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = (props) => {
-  const estiloTime = { backgroundColor: props.corSecundaria };
+const Time = ({ time, colaboradores }) => {
+  const estiloTime = { backgroundColor: time.corSecundaria };
 
   return (
-    props.colaboradores.length > 0 && (
+    colaboradores.length > 0 && (
       <section className="time" style={estiloTime}>
         <header>
-          <h3>{props.nome}</h3>
-          <span style={{ backgroundColor: props.corPrimaria }}></span>
+          <h3>{time.nome}</h3>
+          <span style={{ backgroundColor: time.corPrimaria }}></span>
         </header>
         <div className="colaboradores">
-          {props.colaboradores.map((colaborador) => (
-            <Colaborador
-              key={colaborador.nome}
-              cor={props.corPrimaria}
-              link={colaborador.link}
-              nome={colaborador.nome}
-              cargo={colaborador.cargo}
-            />
-          ))}
+          {colaboradores.map((colaborador, index) => {
+            console.log("Renderizando o colaborador");
+            return (
+              <Colaborador
+                key={index}
+                cor={time.corPrimaria}
+                colaborador={colaborador}
+              />
+            );
+          })}
         </div>
       </section>
     )

@@ -59,12 +59,10 @@ function App() {
         }
       />
       <TituloSecao nome="Minha Organização:" />
-      {times.map((time) => (
+      {times.map((time, index) => (
         <Time
-          key={time.nome}
-          nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          key={index}
+          time={time}
           colaboradores={colaboradores.filter(
             (colaborador) => colaborador.time === time.nome
           )}
