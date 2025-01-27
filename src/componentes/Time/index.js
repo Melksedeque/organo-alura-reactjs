@@ -13,7 +13,7 @@ const Time = ({ time, colaboradores, alterarCor, aoDeletar }) => {
           type="color"
           className="input-cor"
           value={time.cor}
-          onChange={(e) => alterarCor(e.target.value, time.nome)}
+          onChange={(e) => alterarCor(e.target.value, time.id)}
         />
         <header>
           <h3>{time.nome}</h3>
