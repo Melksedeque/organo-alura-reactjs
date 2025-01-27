@@ -1,7 +1,7 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = ({ time, colaboradores }) => {
+const Time = ({ time, colaboradores, aoDeletar }) => {
   const estiloTime = { backgroundColor: time.corSecundaria };
 
   return (
@@ -13,12 +13,12 @@ const Time = ({ time, colaboradores }) => {
         </header>
         <div className="colaboradores">
           {colaboradores.map((colaborador, index) => {
-            console.log("Renderizando o colaborador");
             return (
               <Colaborador
                 key={index}
                 cor={time.corPrimaria}
                 colaborador={colaborador}
+                aoDeletar={aoDeletar}
               />
             );
           })}
