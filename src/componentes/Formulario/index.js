@@ -14,6 +14,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
 
   const aoSalvar = (e) => {
     e.preventDefault();
+    console.log("Times selecionados:", time);
     const novosColaboradores = time.map((t) => ({
       nome,
       cargo,
