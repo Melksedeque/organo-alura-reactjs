@@ -1,6 +1,5 @@
 .time {
-  background: url("/public/imagens/fundo.png") no-repeat center center
-    transparent;
+  background: url("/public/imagens/fundo.png") repeat center center transparent;
   padding: 32px;
   position: relative;
   text-align: center;
