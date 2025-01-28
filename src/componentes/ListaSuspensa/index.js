@@ -1,3 +1,4 @@
+import Select from "react-select";
 import "./ListaSuspensa.css";
 
 const ListaSuspensa = ({
@@ -7,20 +8,22 @@ const ListaSuspensa = ({
   aoAlterado,
   obrigatorio = false,
 }) => {
+  const options = itens.map((item) => ({ value: item, label: item }));
+
   return (
     <div className="lista-suspensa">
       <label>{label}</label>
-      <select
+      <Select
+        isMulti
+        options={options}
+        value={options.filter((option) => valor.includes(option.value))}
+        onChange={(selectedOptions) =>
+          aoAlterado(
+            selectedOptions ? selectedOptions.map((option) => option.value) : []
+          )
+        }
         required={obrigatorio}
-        value={valor}
-        onChange={(e) => aoAlterado(e.target.value)}
-      >
-        <option value="" disabled defaultValue>
-          -- Escolha uma opção --
-        </option>
-        {Array.isArray(itens) &&
-          itens.map((item) => <option key={item}>{item}</option>)}
-      </select>
+      />
     </div>
   );
 };
