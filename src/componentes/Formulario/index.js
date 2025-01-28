@@ -8,22 +8,25 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [link, setLink] = useState("");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState([]);
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
   const aoSalvar = (e) => {
     e.preventDefault();
-    aoColaboradorCadastrado({
+    const novosColaboradores = time.map((t) => ({
       nome,
       cargo,
       link,
-      time,
-    });
+      time: t,
+    }));
+    novosColaboradores.forEach((colaborador) =>
+      aoColaboradorCadastrado(colaborador)
+    );
     setNome("");
     setCargo("");
     setLink("");
-    setTime("");
+    setTime([]);
   };
 
   return (
