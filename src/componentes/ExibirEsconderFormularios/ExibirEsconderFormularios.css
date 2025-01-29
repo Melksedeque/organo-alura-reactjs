@@ -1,0 +1,19 @@
+button.exibir-esconder-formulario {
+  background-color: #6278f7;
+  border: 3px solid white;
+  border-radius: 100px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25), inset 0 0 0 transparent;
+  cursor: pointer;
+  display: block;
+  height: 86px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transition: all 0.25s ease;
+  transform: translateY(-50%);
+  width: 86px;
+}
+
+button.exibir-esconder-formulario:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25), inset 0 5px 5px rgba(0, 0, 0, 0.25);
+}
