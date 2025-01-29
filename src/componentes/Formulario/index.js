@@ -1,7 +1,7 @@
 import "./Formulario.css";
 import Campo from "../Campo";
 import ListaSuspensa from "../ListaSuspensa";
-import Botao from "../Botao";
+import BotaoSubmit from "../BotaoSubmit";
 import { useState } from "react";
 
 const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
@@ -64,7 +64,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
           aoAlterado={(valor) => setTime(valor)}
           obrigatorio
         />
-        <Botao texto="Criar card" />
+        <BotaoSubmit texto="Criar card" />
       </form>
       <form
         onSubmit={(e) => {
@@ -89,7 +89,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime }) => {
           placeholder="Insira a cor do time em Hex"
           obrigatorio
         />
-        <Botao texto="Criar um novo time" />
+        <BotaoSubmit texto="Criar um novo time" />
       </form>
     </section>
   );

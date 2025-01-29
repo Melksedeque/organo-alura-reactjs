@@ -1,4 +1,4 @@
-button.botao {
+button.botao-submit {
   background-color: #6278f7;
   border: none;
   border-radius: 8px;
@@ -10,6 +10,6 @@ button.botao {
   padding: 32px;
 }
 
-button.botao:hover {
+button.botao-submit:hover {
   color: #95ffd4;
 }
