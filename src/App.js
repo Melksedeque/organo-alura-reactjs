@@ -5,6 +5,7 @@ import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
 import TituloSecao from "./componentes/TituloSecao";
 import { v4 as uuidv4 } from "uuid";
+import ExibirEsconderFormularios from "./componentes/ExibirEsconderFormularios";
 
 function App() {
   const [times, setTimes] = useState([
@@ -142,7 +143,10 @@ function App() {
           colaboradorAdicionado(colaborador)
         }
       />
-      <TituloSecao nome="Minha Organização:" />
+      <section className="secao">
+        <TituloSecao nome="Minha Organização:" />
+        <ExibirEsconderFormularios />
+      </section>
       {times.map((time, index) => (
         <Time
           key={index}
