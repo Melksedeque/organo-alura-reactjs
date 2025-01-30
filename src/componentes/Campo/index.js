@@ -14,9 +14,11 @@ const Campo = ({
 
   return (
     <div className={`campo campo-${type}`}>
-      <label>{label}: </label>
+      <label htmlFor={label}>{label}: </label>
       <input
         type={type}
+        id={label}
+        name={label}
         value={valor}
         placeholder={placeholder}
         required={obrigatorio}
