@@ -98,6 +98,8 @@ function App() {
   ];
 
   const [colaboradores, setColaboradores] = useState(inicial);
+  const [exibirFormulario, setExibirFormulario] = useState(false);
+
   const colaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
@@ -142,10 +144,14 @@ function App() {
         aoColaboradorCadastrado={(colaborador) =>
           colaboradorAdicionado(colaborador)
         }
+        exibir={exibirFormulario}
       />
       <section className="secao">
         <TituloSecao nome="Minha Organização:" />
-        <ExibirEsconderFormularios />
+        <ExibirEsconderFormularios
+          exibir={exibirFormulario}
+          aoAlternar={() => setExibirFormulario(!exibirFormulario)}
+        />
       </section>
       {times.map((time, index) => (
         <Time
