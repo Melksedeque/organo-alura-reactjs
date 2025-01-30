@@ -12,9 +12,9 @@
 - [Estrutura de Pastas](#estrutura-de-pastas)
   - [Arquivos Principais](#arquivos-principais)
 - [Como Instalar e Rodar o Projeto](#como-instalar-e-rodar-o-projeto)
-  - [Configuração](#configuracao)
+  - [Configuração](#configuração)
   - [Casos de Uso Comuns](#casos-de-uso-comuns)
-  - [Solução de Problemas](#solucao-de-problemas)
+  - [Solução de Problemas](#solução-de-problemas)
 - [Projeto ao Vivo](#projeto-ao-vivo)
 - [Fluxo de Dados](#fluxo-de-dados)
 - [Licença](#licença)
@@ -56,6 +56,7 @@ Este projeto ainda está em desenvolvimento para melhorias.
 - **react-select:** Componente de seleção customizável para React.
 - **uuid:** Biblioteca para geração de identificadores únicos.
 - **hex-to-rgba:** Utilitário para conversão de cores hexadecimais para RGBA.
+- **json-server:** Utilizado para criar uma API REST fake para desenvolvimento e testes.
 
 ## Estrutura de Pastas
 
@@ -146,15 +147,19 @@ Pré-requisitos:
    ```
    npm install
    ```
-4. Inicie o servidor JSON para usar como base de dados:
+4. Instale o json-server globalmente:
+   ```
+   npm install -g json-server
+   ```
+5. Inicie o servidor JSON para usar como base de dados:
    ```
    json-server --watch Database/db.json -p 8080
    ```
-5. Inicie o servidor de desenvolvimento:
+6. Inicie o servidor de desenvolvimento:
    ```
    npm start
    ```
-6. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
+7. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
 
 ### Configuração
 
