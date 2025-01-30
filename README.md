@@ -42,10 +42,8 @@ Este projeto ainda está em desenvolvimento para melhorias.
 
 ### Proximos passos de desenvolvimento
 
-- Gerar um JSON para armazenar as informações cadastradas;
 - Criar possibilidade de um Colaborador pertencer a mais de um time;
 - Criar possibilidade de edição para trocar membros de times;
-- Criar botão para excluir membro do time;
 
 ## Tecnologias Utilizadas
 
