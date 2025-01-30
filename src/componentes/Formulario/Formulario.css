@@ -1,8 +1,11 @@
 .formulario {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: center;
+  height: 0;
+  opacity: 0;
   gap: 100px;
+  transition: all 5s ease;
   margin: 100px 200px;
 }
 
@@ -14,4 +17,8 @@
   padding: 36px 64px;
 }
 
-@media;
+.formulario-true {
+  display: flex;
+  height: 100%;
+  opacity: 1;
+}
