@@ -1,0 +1,89 @@
+{
+  "times": [
+    {
+      "id": "ab41",
+      "nome": "Programação",
+      "cor": "#57C278"
+    },
+    {
+      "id": "4266",
+      "nome": "Front-End",
+      "cor": "#82CFFA"
+    },
+    {
+      "id": "ebaa",
+      "nome": "Data Science",
+      "cor": "#A6D157"
+    },
+    {
+      "id": "4e4c",
+      "nome": "DevOps",
+      "cor": "#E06B69"
+    },
+    {
+      "id": "dcf1",
+      "nome": "UX e Design",
+      "cor": "#DB6EBF"
+    },
+    {
+      "id": "d13d",
+      "nome": "Mobile",
+      "cor": "#FFBA05"
+    },
+    {
+      "id": "88bd",
+      "nome": "Inovação e Gestão",
+      "cor": "#FF8A29"
+    }
+  ],
+  "pessoas": [
+    {
+      "id": "979f",
+      "nome": "Daniel Artine",
+      "cargo": "Engenheiro de Software",
+      "link": "https://github.com/danielartine",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "id": "f096",
+      "nome": "Guilherme Lima",
+      "cargo": "Desenvolvedor Python e JavaScript",
+      "link": "https://github.com/guilhermeonrails",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "id": "41be",
+      "nome": "Juliana Amoasei",
+      "cargo": "Desenvolvedora de Softwares",
+      "link": "https://github.com/julianaamoasei",
+      "time": "Programação",
+      "favorito": false
+    },
+    {
+      "id": "81ac",
+      "nome": "Melksedeque Silva",
+      "cargo": "Desenvolvedor Front-End",
+      "link": "https://github.com/Melksedeque",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "id": "c2c2",
+      "nome": "Rodrigo Passos",
+      "cargo": "Desenvolvedor Front-End",
+      "link": "https://github.com/rpc1910",
+      "time": "Front-End",
+      "favorito": false
+    },
+    {
+      "id": "03c8",
+      "nome": "Amanda Domingues",
+      "cargo": "Cientista de Dados",
+      "link": "https://github.com/amandaamnd",
+      "time": "Data Science",
+      "favorito": false
+    }
+  ]
+}
