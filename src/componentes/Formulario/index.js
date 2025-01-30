@@ -32,8 +32,13 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
 
   return (
     exibir && (
-      <section className="formulario">
-        <form onSubmit={aoSalvar}>
+      <section className={`formulario formulario-${exibir}`}>
+        <form
+          id="form-colaborador"
+          name="form-colaborador"
+          onSubmit={aoSalvar}
+          acceptCharset="utf-8"
+        >
           <h2>Preencha os dados para criar o card do colaborador.</h2>
           <Campo
             label="Nome"
@@ -68,14 +73,17 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
           <BotaoSubmit texto="Criar card" />
         </form>
         <form
+          id="form-time"
+          name="form-time"
           onSubmit={(e) => {
             e.preventDefault();
             criarTime({ nome: nomeTime, cor: corTime });
           }}
+          acceptCharset="utf-8"
         >
           <h2>Preencha os dados para criar um novo time.</h2>
           <Campo
-            label="Nome"
+            label="Time"
             type="text"
             valor={nomeTime}
             aoAlterado={(valor) => setNomeTime(valor)}
