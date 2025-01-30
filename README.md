@@ -51,11 +51,18 @@ Este projeto ainda está em desenvolvimento para melhorias.
 - **CSS:** Utilizado para a estilização dos componentes e layout da aplicação.
 - **JavaScript:** Linguagem de programação utilizada no desenvolvimento da lógica da aplicação.
 - **useState:** Hook do React.JS utilizado para gerenciar o estado dos componentes.
+- **useEffect:** Hook do React.JS utilizado para realizar o fetch da API.
+- **react-icons:** Biblioteca para inclusão de ícones no projeto.
+- **react-select:** Componente de seleção customizável para React.
+- **uuid:** Biblioteca para geração de identificadores únicos.
+- **hex-to-rgba:** Utilitário para conversão de cores hexadecimais para RGBA.
 
 ## Estrutura de Pastas
 
 ```
 organo-alura-reactjs/
+├── Database/
+│ └── db.json
 ├── public/
 │ ├── imagens/
 │ │ ├── banner.png
@@ -113,6 +120,7 @@ organo-alura-reactjs/
 
 ### Arquivos Principais:
 
+- `Database/db.json`: Arquivo JSON que possui dados iniciais de times e colaboradores
 - `src/App.js`: Componente principal da aplicação
 - `src/index.js`: Ponto de entrada da aplicação
 - `package.json`: Configuração do projeto e dependências
@@ -138,15 +146,19 @@ Pré-requisitos:
    ```
    npm install
    ```
-4. Inicie o servidor de desenvolvimento:
+4. Inicie o servidor JSON para usar como base de dados:
+   ```
+   json-server --watch Database/db.json -p 8080
+   ```
+5. Inicie o servidor de desenvolvimento:
    ```
    npm start
    ```
-5. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
+6. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
 
 ### Configuração
 
-A aplicação não requer nenhuma configuração específica. No entanto, você pode modificar as equipes e colaboradores iniciais editando os arrays `times` e `inicial` em `src/App.js`.
+A aplicação utiliza um servidor JSON para armazenar e recuperar dados de times e pessoas. Os dados iniciais estão localizados no arquivo `Database/db.json`. Para modificar as equipes e colaboradores iniciais, você pode editar este arquivo JSON.
 
 ### Casos de Uso Comuns
 
