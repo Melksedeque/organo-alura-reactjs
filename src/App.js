@@ -17,7 +17,7 @@ function App() {
     fetch(urlTimes)
       .then((resposta) => resposta.json())
       .then((dados) => {
-        setColaboradores(dados);
+        setTimes(dados);
       });
   }, []);
 
@@ -30,7 +30,6 @@ function App() {
   }, []);
 
   const [colaboradores, setColaboradores] = useState(pessoasInicial);
-  console.log(colaboradores);
   const [exibirFormulario, setExibirFormulario] = useState(false);
 
   const colaboradorAdicionado = (colaborador) => {
