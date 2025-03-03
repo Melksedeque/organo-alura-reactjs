@@ -17,7 +17,7 @@ const Campo = ({
   aoAlterado,
   obrigatorio = false,
 }: CampoProps) => {
-  const aoDigitado = (e) => {
+  const aoDigitado = (e: React.ChangeEvent<HTMLInputElement>) => {
     aoAlterado(e.target.value);
   };
 
