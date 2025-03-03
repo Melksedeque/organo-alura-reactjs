@@ -8,7 +8,7 @@ import ListaSuspensa from "../ListaSuspensa";
 interface FormularioProps {
   aoColaboradorCadastrado: (colaborador: IColaborador) => void;
   times: string[];
-  criarTime: (time: { nome: string; cor: string }) => void;
+  criarTime: (time: { id: number; nome: string; cor: string }) => void;
   exibir: boolean;
 }
 
@@ -37,7 +37,7 @@ const Formulario = ({
     }
 
     const novoColaborador: IColaborador = {
-      id: Math.floor(Math.random() * 1000),
+      id: Math.floor(Math.random() * 100),
       nome,
       cargo,
       imagem,
@@ -100,7 +100,11 @@ const Formulario = ({
           name="form-time"
           onSubmit={(e) => {
             e.preventDefault();
-            criarTime({ nome: nomeTime, cor: corTime });
+            criarTime({
+              id: Math.floor(Math.random() * 100),
+              nome: nomeTime,
+              cor: corTime,
+            });
           }}
           acceptCharset="utf-8"
         >
