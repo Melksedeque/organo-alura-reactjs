@@ -1,5 +1,6 @@
 import hexToRgba from "hex-to-rgba";
 import Colaborador from "../Colaborador";
+import { IColaborador } from "../../compartilhado/interfaces/IColaborador";
 import "./Time.css";
 
 interface TimeProps {
@@ -8,14 +9,7 @@ interface TimeProps {
     nome: string;
     cor: string;
   };
-  colaboradores: {
-    id: number;
-    nome: string;
-    cargo: string;
-    imagem: string;
-    link: string;
-    favorito: boolean;
-  }[];
+  colaboradores: IColaborador[];
   alterarCor: (cor: string, id: number) => void;
   aoDeletar: (id: number) => void;
   aoFavoritar: (id: number) => void;
