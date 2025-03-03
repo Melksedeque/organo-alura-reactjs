@@ -4,8 +4,8 @@ import "./ListaSuspensa.css";
 interface ListaSuspensaProps {
   label: string;
   itens: string[];
-  valor: string[];
-  aoAlterado: (valor: string[]) => void;
+  valor: string;
+  aoAlterado: (valor: string) => void;
   obrigatorio?: boolean;
 }
 
@@ -22,13 +22,10 @@ const ListaSuspensa = ({
     <div className="lista-suspensa">
       <label>{label}</label>
       <Select
-        isMulti
         options={options}
-        value={options.filter((option) => valor.includes(option.value))}
-        onChange={(selectedOptions) =>
-          aoAlterado(
-            selectedOptions ? selectedOptions.map((option) => option.value) : []
-          )
+        value={options.find((option) => option.value === valor)}
+        onChange={(selectedOption) =>
+          aoAlterado(selectedOption ? selectedOption.value : "")
         }
         required={obrigatorio}
       />
