@@ -1,13 +1,12 @@
 import "./Botao.css";
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 interface BotaoProps {
-  texto: string;
-  children: ReactElement;
+  children: ReactNode;
 }
 
-const BotaoSubmit = (props: BotaoProps) => {
-  return <button className="botao-submit">{props.children}</button>;
+const BotaoSubmit = ({ children }: BotaoProps) => {
+  return <button className="botao-submit">{children}</button>;
 };
 
 export default BotaoSubmit;

@@ -1,6 +1,14 @@
 import "./ExibirEsconderFormularios.css";
 
-const ExibirEsconderFormularios = ({ exibir, aoAlternar }) => {
+interface ExibirEsconderFormulariosProps {
+  exibir: boolean;
+  aoAlternar: () => void;
+}
+
+const ExibirEsconderFormularios = ({
+  exibir,
+  aoAlternar,
+}: ExibirEsconderFormulariosProps) => {
   return (
     <>
       <button className="exibir-esconder-formulario" onClick={aoAlternar}>

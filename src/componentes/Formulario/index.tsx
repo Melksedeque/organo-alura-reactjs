@@ -4,15 +4,32 @@ import ListaSuspensa from "../ListaSuspensa";
 import BotaoSubmit from "../BotaoSubmit";
 import { useState } from "react";
 
-const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
+interface FormularioProps {
+  aoColaboradorCadastrado: (colaborador: {
+    nome: string;
+    cargo: string;
+    link: string;
+    time: string;
+  }) => void;
+  times: string[];
+  criarTime: (time: { nome: string; cor: string }) => void;
+  exibir: boolean;
+}
+
+const Formulario = ({
+  aoColaboradorCadastrado,
+  times,
+  criarTime,
+  exibir,
+}: FormularioProps) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [link, setLink] = useState("");
-  const [time, setTime] = useState([]);
+  const [time, setTime] = useState<string[]>([]);
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
-  const aoSalvar = (e) => {
+  const aoSalvar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Times selecionados:", time);
     const novosColaboradores = time.map((t) => ({
@@ -67,7 +84,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
             label="Time"
             itens={times}
             valor={time}
-            aoAlterado={(valor) => setTime(valor)}
+            aoAlterado={(valor: string[]) => setTime(valor)}
             obrigatorio
           />
           <BotaoSubmit>Criar card</BotaoSubmit>
