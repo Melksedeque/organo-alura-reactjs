@@ -70,7 +70,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
             aoAlterado={(valor) => setTime(valor)}
             obrigatorio
           />
-          <BotaoSubmit texto="Criar card" />
+          <BotaoSubmit>Criar card</BotaoSubmit>
         </form>
         <form
           id="form-time"
@@ -98,7 +98,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, criarTime, exibir }) => {
             placeholder="Insira a cor do time em Hex"
             obrigatorio
           />
-          <BotaoSubmit texto="Criar um novo time" />
+          <BotaoSubmit>Criar um novo time</BotaoSubmit>
         </form>
       </section>
     )
