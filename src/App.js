@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner src="/imagens/banner.png" alt="O banner principal da página" />
       <Formulario
         criarTime={criarTime}
         times={Array.isArray(times) ? times.map((time) => time.nome) : []}
