@@ -4,14 +4,16 @@ import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
 import TituloSecao from "./componentes/TituloSecao";
-import { v4 as uuidv4 } from "uuid";
 import ExibirEsconderFormularios from "./componentes/ExibirEsconderFormularios";
+import { IColaborador } from "./compartilhado/interfaces/IColaborador";
+import { ITimes } from "./compartilhado/interfaces/ITimes";
 
 function App() {
   const urlTimes = "http://localhost:8080/times";
   const urlPessoas = "http://localhost:8080/pessoas";
 
-  const [times, setTimes] = useState([]);
+  const [times, setTimes] = useState<ITimes[]>([]);
+  const [colaboradores, setColaboradores] = useState<IColaborador[]>([]);
 
   useEffect(() => {
     fetch(urlTimes)
@@ -21,7 +23,7 @@ function App() {
       });
   }, []);
 
-  const pessoasInicial = useEffect(() => {
+  useEffect(() => {
     fetch(urlPessoas)
       .then((resposta) => resposta.json())
       .then((dados) => {
@@ -29,21 +31,20 @@ function App() {
       });
   }, []);
 
-  const [colaboradores, setColaboradores] = useState(pessoasInicial);
   const [exibirFormulario, setExibirFormulario] = useState(false);
 
-  const colaboradorAdicionado = (colaborador) => {
+  const colaboradorAdicionado = (colaborador: IColaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
 
-  function deletarColaborador(id) {
+  function deletarColaborador(id: number) {
     setColaboradores(
-      colaboradores.filter((colaborador) => colaborador.id !== id)
+      colaboradores.filter((colaborador: IColaborador) => colaborador.id !== id)
     );
     return;
   }
 
-  function alterarCorDoTime(cor, id) {
+  function alterarCorDoTime(cor: string, id: number) {
     setTimes(
       times.map((time) => {
         if (time.id === id) {
@@ -54,11 +55,11 @@ function App() {
     );
   }
 
-  function criarTime(novoTime) {
-    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+  function criarTime(novoTime: ITimes) {
+    setTimes([...times, { ...novoTime, id: Math.floor(Math.random() * 100) }]);
   }
 
-  function resolverFavorito(id) {
+  function resolverFavorito(id: number) {
     setColaboradores(
       colaboradores.map((colaborador) => {
         if (colaborador.id === id) colaborador.favorito = !colaborador.favorito;
