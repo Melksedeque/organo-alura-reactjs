@@ -46,7 +46,7 @@ function App() {
 
   function alterarCorDoTime(cor: string, id: number) {
     setTimes(
-      times.map((time) => {
+      times.map((time: ITimes) => {
         if (time.id === id) {
           time.cor = cor;
         }
@@ -61,7 +61,7 @@ function App() {
 
   function resolverFavorito(id: number) {
     setColaboradores(
-      colaboradores.map((colaborador) => {
+      colaboradores.map((colaborador: IColaborador) => {
         if (colaborador.id === id) colaborador.favorito = !colaborador.favorito;
         return colaborador;
       })
