@@ -1,16 +1,12 @@
 import "./Formulario.css";
-import Campo from "../Campo";
-import ListaSuspensa from "../ListaSuspensa";
-import BotaoSubmit from "../BotaoSubmit";
 import { useState } from "react";
+import { IColaborador } from "../../compartilhado/interfaces/IColaborador";
+import Campo from "../Campo";
+import BotaoSubmit from "../BotaoSubmit";
+import ListaSuspensa from "../ListaSuspensa";
 
 interface FormularioProps {
-  aoColaboradorCadastrado: (colaborador: {
-    nome: string;
-    cargo: string;
-    link: string;
-    time: string;
-  }) => void;
+  aoColaboradorCadastrado: (colaborador: IColaborador) => void;
   times: string[];
   criarTime: (time: { nome: string; cor: string }) => void;
   exibir: boolean;
@@ -25,26 +21,36 @@ const Formulario = ({
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [link, setLink] = useState("");
-  const [time, setTime] = useState<string[]>([]);
+  const [time, setTime] = useState("");
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
 
   const aoSalvar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Times selecionados:", time);
-    const novosColaboradores = time.map((t) => ({
+    console.log("Time selecionado:", time);
+
+    let imagem = link;
+    if (imagem.endsWith("/")) {
+      imagem = `${imagem.slice(0, -1)}.png`;
+    } else {
+      imagem = `${imagem}.png`;
+    }
+
+    const novoColaborador: IColaborador = {
+      id: Math.floor(Math.random() * 1000),
       nome,
       cargo,
+      imagem,
       link,
-      time: t,
-    }));
-    novosColaboradores.forEach((colaborador) =>
-      aoColaboradorCadastrado(colaborador)
-    );
+      favorito: false,
+      time,
+    };
+
+    aoColaboradorCadastrado(novoColaborador);
     setNome("");
     setCargo("");
     setLink("");
-    setTime([]);
+    setTime("");
   };
 
   return (
@@ -84,7 +90,7 @@ const Formulario = ({
             label="Time"
             itens={times}
             valor={time}
-            aoAlterado={(valor: string[]) => setTime(valor)}
+            aoAlterado={(valor: string) => setTime(valor)}
             obrigatorio
           />
           <BotaoSubmit>Criar card</BotaoSubmit>
