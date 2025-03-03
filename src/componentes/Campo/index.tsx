@@ -1,5 +1,14 @@
 import "./Campo.css";
 
+interface CampoProps {
+  label: string;
+  type: string;
+  placeholder: string;
+  valor: string;
+  aoAlterado: (valor: string) => void;
+  obrigatorio?: boolean;
+}
+
 const Campo = ({
   label,
   type,
@@ -7,7 +16,7 @@ const Campo = ({
   valor,
   aoAlterado,
   obrigatorio = false,
-}) => {
+}: CampoProps) => {
   const aoDigitado = (e) => {
     aoAlterado(e.target.value);
   };
