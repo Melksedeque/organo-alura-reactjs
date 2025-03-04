@@ -24,6 +24,7 @@ const Formulario = ({
   const [time, setTime] = useState("");
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("");
+  const [data, setData] = useState("");
 
   const aoSalvar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,6 +43,7 @@ const Formulario = ({
       cargo,
       imagem,
       link,
+      data,
       favorito: false,
       time,
     };
@@ -65,7 +67,6 @@ const Formulario = ({
           <h2>Preencha os dados para criar o card do colaborador.</h2>
           <Campo
             label="Nome"
-            type="text"
             valor={nome}
             aoAlterado={(valor) => setNome(valor)}
             placeholder="Digite seu nome"
@@ -73,7 +74,6 @@ const Formulario = ({
           />
           <Campo
             label="Cargo"
-            type="text"
             valor={cargo}
             aoAlterado={(valor) => setCargo(valor)}
             placeholder="Digite seu cargo"
@@ -81,10 +81,16 @@ const Formulario = ({
           />
           <Campo
             label="Github"
-            type="text"
             valor={link}
             aoAlterado={(valor) => setLink(valor)}
             placeholder="Informe o seu link do Github"
+          />
+          <Campo
+            label="Data de entrada"
+            type="date"
+            valor={data}
+            aoAlterado={(valor) => setData(valor)}
+            placeholder=""
           />
           <ListaSuspensa
             label="Time"
