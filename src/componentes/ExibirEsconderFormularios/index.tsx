@@ -6,7 +6,6 @@ interface ExibirEsconderFormulariosProps {
 }
 
 const ExibirEsconderFormularios = ({
-  exibir,
   aoAlternar,
 }: ExibirEsconderFormulariosProps) => {
   return (
