@@ -57,7 +57,13 @@
 .colaborador h5 {
   color: #212121;
   font: normal 16px "Montserrat", sans-serif;
-  margin: 10px 0 30px;
+  margin: 10px 0 0;
+}
+
+.colaborador h6 {
+  color: #212121;
+  font: normal 12px "Montserrat", sans-serif;
+  margin: 5px 0 30px;
 }
 
 .deletar {

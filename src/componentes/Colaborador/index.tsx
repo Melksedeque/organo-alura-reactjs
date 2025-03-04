@@ -7,6 +7,7 @@ interface ColaboradorProps {
     nome: string;
     cargo: string;
     imagem: string;
+    data: string;
     link: string;
     favorito: boolean;
   };
@@ -42,7 +43,7 @@ const Colaborador = ({
   }
 
   return (
-    <div className="colaborador">
+    <div className="colaborador" data-key={colaborador.id}>
       <AiFillCloseCircle
         size={25}
         color="tomato"
@@ -64,7 +65,7 @@ const Colaborador = ({
           rel="noreferrer"
         >
           <img src={fotoColaborador} alt={colaborador.nome} />
-          <figcaption hidden>Melksedeque Silva</figcaption>
+          <figcaption hidden>{colaborador.nome}</figcaption>
         </a>
       </figure>
       <h4>
@@ -78,6 +79,7 @@ const Colaborador = ({
         </a>
       </h4>
       <h5>{colaborador.cargo}</h5>
+      <h6>{new Date(colaborador.data).toLocaleDateString()}</h6>
     </div>
   );
 };
