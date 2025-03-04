@@ -103,12 +103,19 @@ organo-alura-reactjs/
 
 ### Arquivos Principais:
 
-- `Database/db.json`: Arquivo JSON que possui dados iniciais de times e colaboradores
-- `src/App.js`: Componente principal da aplicação
-- `src/index.js`: Ponto de entrada da aplicação
-- `package.json`: Configuração do projeto e dependências
-- `/index.html`: Modelo HTML para a aplicação
-- `public/manifest.json`: Arquivo de manifesto da aplicação web
+- `Database/db.json`: Arquivo JSON que contém os dados iniciais de times e colaboradores para a API REST fake
+- `src/App.tsx`: Componente principal da aplicação que gerencia o estado e a lógica de negócios
+- `src/main.tsx`: Ponto de entrada da aplicação que inicializa o React
+- `src/compartilhado/interfaces/`: Diretório contendo as interfaces TypeScript que definem as estruturas de dados
+  - `IColaborador.ts`: Interface para o tipo Colaborador
+  - `ITimes.ts`: Interface para o tipo Times
+- `index.html`: Template HTML principal que serve como ponto de montagem para a aplicação React
+- `vite.config.ts`: Configuração do Vite para build e desenvolvimento
+- `tsconfig.json`: Configuração principal do TypeScript
+- `tsconfig.app.json`: Configuração do TypeScript específica para a aplicação
+- `tsconfig.node.json`: Configuração do TypeScript para ambiente Node.js
+- `package.json`: Configuração do projeto, scripts e dependências
+- `eslint.config.js`: Configuração do ESLint para linting do código
 
 ## Como Instalar e Rodar o Projeto
 
