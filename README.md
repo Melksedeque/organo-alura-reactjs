@@ -141,7 +141,9 @@ Pré-requisitos:
    ```bash
    npm run dev
    ```
-7. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
+7. Acesse a aplicação em seu navegador no endereço **http://localhost:8080** para visualizar a API, ou nos links *http://localhost:8080/times* e *http://localhost:8080/pessoas*.
+
+8. Acesse o endereço gerado pelo terminal ao rodar o comando ```npm run dev```, por padrão este endereço é o **http://localhost:5173**, mas isso pode variar de acordo com as suas configurações de ambiente.
 
 ### Configuração
 
