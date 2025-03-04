@@ -38,49 +38,55 @@
   ],
   "pessoas": [
     {
-      "id": "979f",
+      "id": "006",
       "nome": "Daniel Artine",
       "cargo": "Engenheiro de Software",
+      "data": "02/02/2025",
       "link": "https://github.com/danielartine",
       "time": "Programação",
       "favorito": false
     },
     {
-      "id": "f096",
+      "id": "004",
       "nome": "Guilherme Lima",
       "cargo": "Desenvolvedor Python e JavaScript",
+      "data": "02/02/2025",
       "link": "https://github.com/guilhermeonrails",
       "time": "Programação",
       "favorito": false
     },
     {
-      "id": "41be",
+      "id": "005",
       "nome": "Juliana Amoasei",
       "cargo": "Desenvolvedora de Softwares",
+      "data": "02/02/2025",
       "link": "https://github.com/julianaamoasei",
       "time": "Programação",
       "favorito": false
     },
     {
-      "id": "81ac",
+      "id": "001",
       "nome": "Melksedeque Silva",
       "cargo": "Desenvolvedor Front-End",
+      "data": "02/02/2025",
       "link": "https://github.com/Melksedeque",
       "time": "Front-End",
       "favorito": false
     },
     {
-      "id": "c2c2",
+      "id": "003",
       "nome": "Rodrigo Passos",
       "cargo": "Desenvolvedor Front-End",
+      "data": "02/02/2025",
       "link": "https://github.com/rpc1910",
       "time": "Front-End",
       "favorito": false
     },
     {
-      "id": "03c8",
+      "id": "002",
       "nome": "Amanda Domingues",
       "cargo": "Cientista de Dados",
+      "data": "02/02/2025",
       "link": "https://github.com/amandaamnd",
       "time": "Data Science",
       "favorito": false
