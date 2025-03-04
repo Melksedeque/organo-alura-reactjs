@@ -66,57 +66,39 @@ organo-alura-reactjs/
 │ └── db.json
 ├── public/
 │ ├── imagens/
-│ │ ├── banner.png
-│ │ ├── fb.png
-│ │ ├── fundo.png
-│ │ ├── ig.png
-│ │ ├── logo.png
-│ │ └── tw.png
-│ ├── favicon.ico
-│ ├── index.html
-│ ├── logo192.png
-│ ├── logo512.png
-│ ├── manifest.json
-│ └── robots.txt
+│ └── manifest.json
 ├── screenshot/
 │ └── tela-principal.png
 ├── src/
+│ ├── compartilhado/
+│ │ └── interfaces/
 │ ├── componentes/
 │ │ ├── Banner/
-│ │ │ ├── Banner.css
-│ │ │ └── index.js
-│ │ ├── Botao/
-│ │ │ ├── Botao.css
-│ │ │ └── index.js
-│ │ ├── CampoTexto/
-│ │ │ ├── CampoTexto.css
-│ │ │ └── index.js
+│ │ ├── BotaoSubmit/
+│ │ ├── Campo/
 │ │ ├── Colaborador/
-│ │ │ ├── Colaborador.css
-│ │ │ └── index.js
+│ │ ├── ExibirEsconderFormularios/
 │ │ ├── Formulario/
-│ │ │ ├── Formulario.css
-│ │ │ └── index.js
 │ │ ├── ListaSuspensa/
-│ │ │ ├── ListaSuspensa.css
-│ │ │ └── index.js
 │ │ ├── Rodape/
-│ │ │ ├── Rodape.css
-│ │ │ └── index.js
 │ │ ├── Time/
-│ │ │ ├── Time.css
-│ │ │ └── index.js
-│ │ ├── TituloSecao
-│ │ │ ├── TituloSecao.css
-│ │ └─└── index.js
-│ ├── App.js
+│ │ └── TituloSecao
+│ ├── App.tsx
 │ ├── index.css
-│ └── index.js
+│ ├── main.tsx
+│ └── vite-env.d.ts
 ├── .gitignore
+├── eslint.config.js
+├── icon.ico
+├── index.html
 ├── LICENSE
 ├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
 ### Arquivos Principais:
@@ -125,7 +107,7 @@ organo-alura-reactjs/
 - `src/App.js`: Componente principal da aplicação
 - `src/index.js`: Ponto de entrada da aplicação
 - `package.json`: Configuração do projeto e dependências
-- `public/index.html`: Modelo HTML para a aplicação
+- `/index.html`: Modelo HTML para a aplicação
 - `public/manifest.json`: Arquivo de manifesto da aplicação web
 
 ## Como Instalar e Rodar o Projeto
@@ -136,28 +118,28 @@ Pré-requisitos:
 - npm (versão 6.0 ou superior)
 
 1. Faça o clone deste repositório em sua máquina local:
-   ```
+   ```bash
    git clone https://github.com/Melksedeque/organo-alura-reactjs.git
    ```
 2. Acesse o diretório do projeto:
-   ```
+   ```bash
    cd organo-alura-reactjs
    ```
 3. Instale as dependências do projeto:
-   ```
+   ```bash
    npm install
    ```
 4. Instale o json-server globalmente:
-   ```
+   ```bash
    npm install -g json-server
    ```
 5. Inicie o servidor JSON para usar como base de dados:
-   ```
+   ```bash
    json-server --watch Database/db.json -p 8080
    ```
 6. Inicie o servidor de desenvolvimento:
-   ```
-   npm start
+   ```bash
+   npm run dev
    ```
 7. Acesse a aplicação em seu navegador no endereço **http://localhost:3000**.
 
