@@ -2,7 +2,7 @@ import "./Campo.css";
 
 interface CampoProps {
   label: string;
-  type: "text" | "date" | "password" | "email" | "tel" | "number";
+  type?: "text" | "date" | "password" | "email" | "tel" | "number";
   placeholder: string;
   valor: string;
   aoAlterado: (valor: string) => void;
