@@ -3,6 +3,7 @@ export interface IColaborador {
   nome: string;
   cargo: string;
   imagem: string;
+  data: string;
   link: string;
   favorito: boolean;
   time: string;
