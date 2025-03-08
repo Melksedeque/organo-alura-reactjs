@@ -1,4 +1,4 @@
-# Projeto Organo - Pessoas e Times - React.JS
+# Projeto Organo - Pessoas e Times - React & Typescript
 
 ![Tela Principal](./screenshot/tela-principal.png)
 
