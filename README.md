@@ -1,5 +1,7 @@
 # Projeto Organo - Pessoas e Times - React & Typescript
 
+O projeto "Organo - Pessoas e Times" é uma aplicação React, recém migrada de JS para Typescript, que permite o cadastro de colaboradores em seus respectivos times dentro de uma organização. Cada time é representado por uma cor diferente, tornando a visualização mais intuitiva e agradável.
+
 ![Tela Principal](./screenshot/tela-principal.png)
 
 ## Menu
